@@ -1,0 +1,24 @@
+{
+  "name": "videostream",
+  "version": "1.0.0",
+  "description": "video stream app",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts"
+  },
+  "author": "Salim",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/socket.io": "^2.1.11",
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0-pre.63",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    html, body{
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+   #site{
+       display: block;
+       margin: 0 auto;
+       width: 500px;
+       height: 100%;
+       border: none;
+       box-shadow: 0 1px 4px rgba(230, 230, 230, 1);;
+   } 
+   @media screen and (max-width: 768px) {
+  #site {
+    width: 100%;
+  }
+}
+</style>
+    </head>
+    <body>
+        <button onclick="getParam()">
+            Tıkla
+        </button>
+        <button onclick="get()">
+            Tıkla
+        </button>
+        <input id="hidden" type="hidden">
+   
+        <div id="iframeDisplay"></div>  
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            function get(){
+                var x = document.getElementById("iframe");
+  var y = (x.contentWindow || x.contentDocument);
+  if (y.document)y = y.document;
+  console.log(y)
+            }
+            function getParam(){
+                var iframe=document.createElement("iframe");
+                iframe.src="http://odeme.oryaz.com.tr/KKform.aspx";
+                iframe.width=500;
+                iframe.height=500;
+                iframe.id="iframe";
+                iframe.name="iframe";
+          
+            $("#iframeDisplay").append(iframe);
+              }
+            </script>
+    </body>
+</html>
